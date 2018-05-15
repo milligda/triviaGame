@@ -9,7 +9,7 @@ $(document).ready(function() {
     var answerLength = 4;
     var answerDisplay = answerLength;
     var responseIntervalId;
-    var responseLength = 10;
+    var responseLength = 20;
     var responseTime = responseLength;
     var audioElement;
 
