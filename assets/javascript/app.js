@@ -62,7 +62,7 @@ $(document).ready(function() {
         responseTime = responseLength;
 
         // display the timer on the page and populate it with the response time
-        $("#timer").fadeIn(750);
+        $("#timer").fadeTo(750, 1);
         $("#timer").html(responseTime);
 
         // run the countdown function every second
@@ -160,7 +160,7 @@ $(document).ready(function() {
         stopTimer();
 
         // hide the timer
-        $("#timer").fadeOut(750);
+        $("#timer").fadeTo(750, 0);
 
         // store the value of the button the user clicks.
         var userAnswer = $(this).attr("value");
