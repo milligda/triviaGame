@@ -61,7 +61,7 @@ var question4 = {
     answer4color: "#111111",
     correctAnswer: 4,
     correctMessage: "you are correct",
-    incorrectMessage: "sadly no. numbers can also be used for colors - so 1 number in a color is 111111",
+    incorrectMessage: "sadly no. numbers can also be used for colors - so 1 number as a color is 111111",
     backgroundColor: "#111111",
     fontColor: "#ffffff",
 };
@@ -237,7 +237,7 @@ var question14 = {
 };
 
 var question15 = {
-    question: "zero out the letters & fade to...",
+    question: "zero out the letters and...",
     answer1: "999999",
     answer1color: "#999999",
     answer2: "4d4d4d",

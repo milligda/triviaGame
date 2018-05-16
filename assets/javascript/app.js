@@ -9,7 +9,7 @@ $(document).ready(function() {
     var answerLength = 4;
     var answerDisplay = answerLength;
     var responseIntervalId;
-    var responseLength = 20;
+    var responseLength = 30;
     var responseTime = responseLength;
     var audioElement;
 
@@ -207,7 +207,7 @@ $(document).ready(function() {
     function gameOver() {
 
         // display the main message field and populate with messages based on their correct answers
-        $("#main").fadeIn(750);
+        $("#main").fadeIn(1500);
         if(correct >= 12) {
             $("#main").text("you did well");
         } else if (correct > 8) {
@@ -232,11 +232,20 @@ $(document).ready(function() {
         audioElement.pause();
 
         // hide the results
-        $(".results").fadeOut(750);
+        $(".results").fadeTo(1500, 0);
 
         // display the start button
         $(".start-button").text('try again');
         $(".start-button").css('display', 'block');
+
+        // format the start-button to appear on a black background
+        $(".start-button").animate({
+            backgroundColor: "#959595",
+        }, animationLength);
+
+        // reset the font color for the answer buttons when the game is started again
+        $(".answer-button").animate({color: "#333333"}, animationLength);
+
 
         // reset the variables
         questionObj;
