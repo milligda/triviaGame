@@ -244,7 +244,7 @@ $(document).ready(function() {
         }, animationLength);
 
         // reset the font color for the answer buttons when the game is started again
-        $(".answer-button").animate({color: "#333333"}, animationLength);
+        $(".answer-button").css('color', '#333333');
 
 
         // reset the variables
