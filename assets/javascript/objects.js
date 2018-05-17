@@ -29,7 +29,7 @@ var question2 = {
     correctMessage: "nicely done",
     incorrectMessage: "sadly no. letters can be used for colors - so a letter in a color is aaaaaa",
     backgroundColor: "#aaaaaa",
-    fontColor: "#f6f6f6",
+    fontColor: "#333333",
 };
 
 var question3 = {

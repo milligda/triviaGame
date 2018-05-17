@@ -88,7 +88,7 @@ $(document).ready(function() {
             setTimeout(timesUp, 3000);
 
             // fade out the answer buttons
-            $(".answer-button").fadeOut(750);
+            $(".answer-button").fadeTo(750, 0);
 
             // display the incorrect message on the page and increase the number of incorrect answers
             $("#message").text(questionObj.incorrectMessage);
@@ -134,7 +134,7 @@ $(document).ready(function() {
         $("#message").text(obj.question);
 
         // display the answer buttons
-        $(".answer-button").fadeIn(750);
+        $(".answer-button").fadeTo(750, 1);
         $(".answer-button").css('display', 'block');
 
         // populate and style the answer buttons 
@@ -169,7 +169,7 @@ $(document).ready(function() {
         userAnswer = parseInt(userAnswer);
 
         // hide the answer buttons
-        $(".answer-button").fadeOut(750);
+        $(".answer-button").fadeTo(750, 0);
 
         // transition the body and answer buttons based on the question settings
         $("body").animate({
