@@ -197,7 +197,7 @@ $(document).ready(function() {
     // controls how long the answer is displayed to the user
     function answerTimer() {
 
-        // if the currentQuestion is greater than the number of questions, run the gameover function.  Otherwise, run another question
+        // if the currentQuestion is less than the number of questions, run another question. Otherwise run the gameover function
         if(currentQuestion < totalQuestions) {
             setTimeout(runQuestion, 1000 * answerLength);
         } else {
