@@ -62,7 +62,6 @@ button {
     font-weight: bold;
     cursor: pointer;
     color: #000000;
-
 }
 
 #answer1 {
@@ -84,3 +83,58 @@ button {
 .start-button:hover, .start-button:focus, .answer-button:hover, .answer-button:focus {
     outline: none;
 }
+
+@media only screen and (max-width: 980px) {
+
+    h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .answer-button  {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    h3 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .main-container {
+        padding: 125px 50px;
+    }
+
+    .answer-button  {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    h1 {
+        font-size: 34px;
+        line-height: 34px;
+    }
+
+    .main-container {
+        padding: 125px 50px;
+    }
+
+    .answer-button  {
+        width: 80%;
+    }
+}
+
