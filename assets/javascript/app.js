@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     var questionObj;
-    var totalQuestions = 15;
-    var currentQuestion = 1;
+    var totalQuestions = game1.length;
+    var currentQuestion = 0;
     var animationLength = 2000;
     var correct = 0;
     var incorrect = 0;
@@ -46,14 +46,15 @@ $(document).ready(function() {
 
     function runQuestion() {
         
-        // set the question object using the current question counter
-        questionObj = eval(`question` + [currentQuestion]);
+        // set the question object using the current question counter as the index of the game 1 array
+        questionObj = game1[currentQuestion];
 
         // run the question timer
         questionTimer();
 
         // display the question using the current question object
         displayQuestion(questionObj);
+
     }
 
     function questionTimer() {
@@ -197,7 +198,7 @@ $(document).ready(function() {
     function answerTimer() {
 
         // if the currentQuestion is greater than the number of questions, run the gameover function.  Otherwise, run another question
-        if(currentQuestion <= totalQuestions) {
+        if(currentQuestion < totalQuestions) {
             setTimeout(runQuestion, 1000 * answerLength);
         } else {
             setTimeout(gameOver, 1000 * answerLength);
@@ -249,7 +250,7 @@ $(document).ready(function() {
 
         // reset the variables
         questionObj;
-        currentQuestion = 1;
+        currentQuestion = 0;
         correct = 0;
         incorrect = 0;
     }
